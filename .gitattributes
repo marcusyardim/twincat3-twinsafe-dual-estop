@@ -1,0 +1,5 @@
+# TwinCAT 3 TcProjectCompare Rules
+*.plcproj merge=TcProjectCompare diff=TcProjectCompare
+*.tsproj merge=TcProjectCompare diff=TcProjectCompare
+*.tcsm merge=TcProjectCompare diff=TcProjectCompare
+*.xml merge=TcProjectCompare diff=TcProjectCompare
