@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Crc="324527756" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83b0405a-1ea3-4da9-bd35-41f49fd8a999}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TwinCAT3SafePlcProject</RootNamespace>
+    <AssemblyName>TwinCAT3SafePlcProject</AssemblyName>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetSystem>EL6900</TargetSystem>
+    <ProgrammingLanguage>Graphical Editor</ProgrammingLanguage>
+    <Worker>Marcus Mustafa Yardim</Worker>
+    <IntProjName>TwinSafeProject</IntProjName>
+    <IsNewCreated>false</IsNewCreated>
+    <SPlcProjVersion>1.8.0.0</SPlcProjVersion>
+    <DocuEditor>Marcus Mustafa Yardim</DocuEditor>
+    <PlotDate>2026-11-19</PlotDate>
+    <CompanyName>Beckhoff Automation GmbH &amp; Co. KG</CompanyName>
+    <CompanyLogo>Beckhoff Automation GmbH &amp; Co. KG</CompanyLogo>
+    <FbPerPage>0</FbPerPage>
+    <AddUserAdministrationPages>False</AddUserAdministrationPages>
+    <AddProjectVersionHistoryPages>False</AddProjectVersionHistoryPages>
+    <AddCustomPages>False</AddCustomPages>
+    <TextBox />
+    <AddMultiSettingDocuments>False</AddMultiSettingDocuments>
+    <AddHashValueTablePages>False</AddHashValueTablePages>
+    <NextSdsId>6</NextSdsId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="TwinSafeGroup1\Alias Devices\EStop1_In.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\EStop1_Out.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\EStop1_Restart.sds" />
+    <None Include="TwinSafeGroup1\TwinSafeGroup1.sal" />
+    <None Include="TwinSafeGroup1\TwinSafeGroup1.sal.diagram">
+      <DependentUpon>TwinSafeGroup1\TwinSafeGroup1.sal</DependentUpon>
+      <Visible>false</Visible>
+    </None>
+    <None Include="TargetSystemConfig.xml">
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GVLs" />
+    <Folder Include="TwinSafeGroup1" />
+    <Folder Include="TwinSafeGroup1\Alias Devices" />
+    <Folder Include="User FBs" />
+    <None Include="TwinSafeGroup1\Alias Devices\ErrorAcknowledgement.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\Run.sds" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <DocumentationProperty>
+      <ProjectVersionHistories />
+    </DocumentationProperty>
+  </ProjectExtensions>
+</Project>

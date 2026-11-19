@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.27" ClassName="CSafetyPlcProjDef">
+	<Project GUID="{83B0405A-1EA3-4DA9-BD35-41F49FD8A999}" Name="TwinSafeProject" PrjFilePath="..\..\TwinSafeProject\TwinSafeProject.splcproj" TmcFilePath="..\..\TwinSafeProject\TwinSafeProject.tmc" GeneralArchiveSettings="#x000f" TargetArchiveSettings="#x0007" FileArchiveSettings="#x000e">
+		<Instance File="TwinSafeProject Instance.xti"/>
+	</Project>
+</TcSmItem>
