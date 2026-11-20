@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{6e8fa00b-7a4d-416c-8b1e-ef35aeb6bf5d}">
+  <POU Name="MAIN" Id="{6e8fa00b-7a4d-416c-8b1e-ef35aeb6bf5d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[PRG_SafetyInterface();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

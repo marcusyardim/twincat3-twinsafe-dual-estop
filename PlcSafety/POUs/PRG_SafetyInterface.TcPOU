@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_SafetyInterface" Id="{dd41822a-56ef-4b1a-9c88-e0a5ce5539b9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SafetyInterface
+VAR
+    fbResetPulse  : R_TRIG;
+    fbErrAckPulse : R_TRIG;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Single-scan rising-edge pulse so Restart never stays stuck TRUE
+fbResetPulse(CLK := GVL_Safety.bEStop1_ResetCmd);
+GVL_Safety.bEStop1_RestartOut := fbResetPulse.Q;
+
+// Single-scan rising-edge pulse for TwinSAFE group error acknowledgment
+fbErrAckPulse(CLK := GVL_Safety.bSafety_ErrAckCmd);
+GVL_Safety.bSafety_ErrAckOut := fbErrAckPulse.Q;
+
+// Derive machine-side tripped state from safe output status
+GVL_Safety.bEStop1_Tripped := NOT GVL_Safety.bEStop1_SafeHealthy;
+
+// Keep TwinSAFE group run signal enabled during normal PLC execution
+GVL_Safety.bSafety_GroupRunOut := TRUE;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

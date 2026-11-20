@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Crc="324527756" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project Crc="3809293605" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
@@ -27,7 +27,7 @@
     <TextBox />
     <AddMultiSettingDocuments>False</AddMultiSettingDocuments>
     <AddHashValueTablePages>False</AddHashValueTablePages>
-    <NextSdsId>6</NextSdsId>
+    <NextSdsId>8</NextSdsId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -39,6 +39,8 @@
     <None Include="TwinSafeGroup1\Alias Devices\EStop1_In.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\EStop1_Out.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\EStop1_Restart.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\EStop1_SafeHealthy.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\Safety_ComFault.sds" />
     <None Include="TwinSafeGroup1\TwinSafeGroup1.sal" />
     <None Include="TwinSafeGroup1\TwinSafeGroup1.sal.diagram">
       <DependentUpon>TwinSafeGroup1\TwinSafeGroup1.sal</DependentUpon>

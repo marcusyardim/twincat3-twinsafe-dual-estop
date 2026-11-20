@@ -3,19 +3,19 @@
   <GVL Name="GVL_Safety" Id="{cf88dd38-b736-4d97-b024-1f3ef90e1e6e}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-    // Operator / HMI / sequence commands
-    bEStop1_ResetCmd     : BOOL;   // Momentary reset request from HMI/button
-    bSafety_ErrAckCmd    : BOOL;   // Momentary error acknowledge request
+    // Operator / HMI / sequence commands (internal PLC tags)
+    bEStop1_ResetCmd     : BOOL;         // Momentary reset request from HMI/button
+    bSafety_ErrAckCmd    : BOOL;         // Momentary error acknowledge request
 
-    // Rising-edge outputs mapped to TwinSAFE standard aliases
-    bEStop1_RestartOut   : BOOL;   // Linked to EStop1_Restart.sds
-    bSafety_ErrAckOut    : BOOL;   // Linked to ErrorAcknowledgement.sds
+    // Rising-edge outputs mapped to TwinSAFE standard aliases (PLC -> TwinSAFE)
+    bEStop1_RestartOut   AT %Q* : BOOL;  // Linked to EStop1_Restart.sds
+    bSafety_ErrAckOut    AT %Q* : BOOL;  // Linked to ErrorAcknowledgement.sds
+    bSafety_GroupRunOut  AT %Q* : BOOL;  // Linked to Run.sds (TwinSAFE group run enable)
 
-    // Safety status & diagnostics
-    bEStop1_SafeHealthy  : BOOL;   // TRUE when E-Stop safe output is healthy
-    bEStop1_Tripped      : BOOL;   // TRUE when E-Stop safe output is open/tripped
-    bSafety_GroupRun     : BOOL;   // TwinSAFE group run state
-    bSafety_ComFault     : BOOL;   // Safety communication / group fault status
+    // Safety status & diagnostics (TwinSAFE / I/O -> PLC)
+    bEStop1_SafeHealthy  AT %I* : BOOL;  // TRUE when E-Stop safe output is healthy
+    bEStop1_Tripped      : BOOL;         // Derived: TRUE when E-Stop is open/tripped
+    bSafety_ComFault     AT %I* : BOOL;  // Safety communication / group fault status
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
